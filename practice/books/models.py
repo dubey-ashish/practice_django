@@ -6,8 +6,8 @@ from django.db.models import ForeignKey
 
 class Author(models.Model):
     objects = models.Manager()
-    name=models.CharField
-    place=models.CharField
+    name=models.CharField(max_length=50,default="Author_name")
+    place=models.CharField(max_length=50, default='Author_place')
 
     def __str__(self):
         return self.name+" ,"+self.place
